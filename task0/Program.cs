@@ -204,7 +204,7 @@
 //     }
 // }
 
-// (int, int) FindNumber(int[,] arrArr, int num) // кортеж (tuple) - возвращает из функции, несколько значени, больше двух
+// (int, int) FindNumber(int[,] arrArr, int num) // кортеж (tuple) - возвращает из функции, несколько значений, больше двух
 // {
 //     for (int i = 0; i < arrArr.GetLength(0); i++)
 //     {
