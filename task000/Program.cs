@@ -1,23 +1,40 @@
-﻿// Напишите программу, которая принимает на вход трехзначное число, а на выходе 
-// показывает последнюю цифру этого числа.
-// System.Console.Write("Введите число: ");
-// int number = Convert.ToInt32(System.Console.ReadLine());
-// System.Console.WriteLine(number % 10);
+﻿// Задача 2: Задайте значения M и N. Напишите программу, которая рекурсивно выведет 
+// все натуральные числа в промежутке от M до N.
+// M = 1; N = 5 -> "1, 2, 3, 4, 5"
+// M = 4; N = 8 -> "4, 5, 6, 7, 8"
 
-// 2. Напишите программу, которая выводит случайное число из отрезка [10, 99] и 
-// показывает наибольшую цифру числа.
+// int ReadInt(string msg)
+// {
+//     System.Console.Write(msg);
+//     return Convert.ToInt32(System.Console.ReadLine());
+// }
 
-int Maxnumber(int num)
+// void RecurseNumbers(int num1, int num2)
+// {
+//     if (num1 > num2)
+//     {
+//         return;
+//     }
+//     System.Console.Write(num1);
+//     RecurseNumbers(num1 + 1, num2);
+// }
+
+// int m = ReadInt("Input first number ");
+// int n = ReadInt("Input second number ");
+// RecurseNumbers(m, n);
+
+
+// Задача 4: Напишите программу, которая на вход принимает два числа A и B, и возводит число 
+// А в целую степень B с помощью рекурсии.
+// A = 3; B = 5 -> 243 (3⁵)
+// A = 2; B = 3 -> 8
+
+int Power(int a, int b)
 {
-    int num1 = num / 10;
-    int num2 = num % 10;
-    int max = num1;
-    if (max < num2)
+    if (b < 1)
     {
-        max = num2;
+        return 1;
     }
-    return max;
+    return a * Power(a, b - 1);
 }
-
-int num = new Random().Next(10, 100);
-System.Console.WriteLine($"Наибольшее число из {num} является {Maxnumber(num)}");
+System.Console.WriteLine(Power(3,5));
